@@ -24,5 +24,20 @@ def day2():
        average = (a+b+c)/3  
        print(average)
   average_calculator()   
+#Day 3 Conditiona and boolean logic
 
-day2()
+def day3():
+    def smart_assistant():
+     print("\n--- Smart Assistant ---")
+     name = input("Hello! What’s your name? ")
+     mood = input(f"Nice to meet you, {name}. How are you feeling today? ").lower()
+
+     if "sad" in mood or "tired" in mood:
+        print("I'm sorry to hear that. Maybe take a short break or a walk?")
+     elif "happy" in mood or "good" in mood:
+        print("That’s great! Keep that energy going!")
+     else:
+        print("Thanks for sharing. I hope your day goes well!")
+    smart_assistant()        
+
+day3()
