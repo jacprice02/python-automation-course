@@ -1,7 +1,4 @@
 #Day 2 - Learnt about python variables and string manipulation
-'''When you break code, don’t copy the fix immediately.
-Pause 30 seconds and predict why it failed — then test your hypothesis.
-This slow debugging reflection multiplies your understanding over time.'''
 def day2():
   def simple_calculator():
      print("\n--- Simple Calculator ---")
@@ -39,5 +36,31 @@ def day3():
      else:
         print("Thanks for sharing. I hope your day goes well!")
     smart_assistant()        
+def day4():
+   def task_repeater():
+    print("\n--- Task Repeater ---")
+    task = input("What task do you want to repeat? ")
+    times = int(input("How many times should I repeat it? "))
 
-day3()
+    for i in range(times):
+        print(f"({i + 1}) {task}")
+   def password_retry_system():
+       password = "trade"
+       attempts = 0
+       guess = input("Try to guess: ")
+       while attempts < 3:
+        if guess == password:
+             print("Correct")
+             break
+        elif guess != password:
+            attempts += 1
+            print(f"wrong you have used {attempts} attempt")
+            if attempts == 3:
+               print("Accses Denied")
+               break
+            else:
+               guess = input("Try to guess: ")
+             
+             
+   password_retry_system()
+day4()
