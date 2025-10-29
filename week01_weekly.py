@@ -63,4 +63,37 @@ def day4():
              
              
    password_retry_system()
-day4()
+
+def day5():
+      def even_number_skipper():
+         for number in range(10):
+           if number % 2 == 0:
+              continue
+           elif number == 9:
+              break    
+           print(number)
+
+      def login_gate():
+        USERNAME = "Jacob"
+        PASSWORD = 12345
+        username = input("Enter the username: ")
+        password = int(input("Enter the password: "))
+
+        if USERNAME == username and PASSWORD == password:
+           print("Accses granted")
+        elif USERNAME == username and PASSWORD != password:
+           print("Wrong Password")
+        else:
+           print("Invalid Credentials")      
+
+      login_gate()
+
+
+
+
+
+
+
+
+
+day5()
