@@ -89,11 +89,29 @@ def day5():
       login_gate()
 
 
+def day6():
+   def number_analyzer():
+     for num in range(5):
+        ask = int(input("Give me a number: "))
+        if ask % 2 == 0:
+           print("The number you have given me is even")
+        if ask % 2 == 1:
+           if ask > 10:
+              print("The number you have given me is a large odd number")
+           if ask < 10:
+              print("The number you have given me is a small odd number")
+   def multiplication_table():
+      for first_num in range(1,6):
+         for num in range(1,6):
+           print(f"{first_num} x {num} = {(first_num * num)}")
+
+   multiplication_table()
+
+      
 
 
 
 
 
 
-
-day5()
+day6()
