@@ -107,7 +107,7 @@ def day6():
 
    multiplication_table()
 
-      
+    
 
 
 
