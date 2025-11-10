@@ -48,6 +48,42 @@ def day9():
    print(f"The average is {rounded_average}\nThe highest score is {highest_score}\nThe Lowest score is {lowest_score}\nThere are {scores_above} scores above 10  ")       
    
  list_value_reporter(["yo","hi"])
+def day10():
+    def max_of_three(first_num,second_num,third_num):
+       list_of_values = [first_num,second_num,third_num]
+       for i in list_of_values:
+        if isinstance(i,int) or isinstance(i,float):         
+           max_num = i
+        else:
+           return "All values must be numerical"
+       for num in list_of_values:
+          if num > max_num:
+             max_num = num
+          return max_num
+    def safe_divide(first_num,second_num):
+       if second_num == 0:
+          return None
+       else:
+          return first_num/second_num
+    def string_meterics(given_string):
+       digits = 0
+       spaces = 0
+       letters = 0
+       for value in given_string:
+          if value.isalpha():
+             letters += 1
+          if value.isdigit():
+             digits += 1
+          if value.isspace():
+             spaces += 1
+       return f"There are {digits} digits and {spaces} spaces and {letters} letters"    
+              
+          
+             
+
+    print(string_meterics("This is my very 1 as in number 1 program"))
+       
+    
 
 
 
@@ -63,5 +99,4 @@ def day9():
 
 
 
-
-day9()
+day10()
